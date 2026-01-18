@@ -1,4 +1,4 @@
-name: Publish Package
+name: Publish
 
 on:
   push:
@@ -11,15 +11,17 @@ permissions:
 
 jobs:
   publish:
+    name: Publish Job
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
-      # - run: npm ci
-      # - run: npm run build --if-present
-      # - run: npm test
-      - run: npm publish
+
+      - name: Publish package
+        run: npm publish
