@@ -22,6 +22,6 @@
     "@trivago/prettier-plugin-sort-imports": "^6.0.2"
   },
   "exports": {
-    "prettier": "./src/prettier.config.mjs"
+    "./prettierConfig": "./src/prettier.config.mjs"
   }
 }
