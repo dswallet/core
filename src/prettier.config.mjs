@@ -7,6 +7,7 @@ export default {
   singleQuote: true,
   jsxSingleQuote: true,
   arrowParens: "avoid",
+  endOfLine: "auto",
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
   importOrderCaseInsensitive: true,
